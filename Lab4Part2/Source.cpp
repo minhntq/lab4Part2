@@ -30,6 +30,7 @@ int main() {
     const int MAX_ROW = 5;
     double mat[MAX_ROW][MAX_COL];
     double* sumRows;
+    double* sumCols;
 
     do {
         showMenu();
@@ -48,6 +49,11 @@ int main() {
             cout << "\nSum of row is: " << sumOfRow(mat, row, MAX_ROW);
             break;
         case 3:
+            int collumn;
+            cout << "\nEnter the collumn you want to sum: ";
+            cin >> collumn;
+
+            cout << "\nSum of collumn is: " << sumOfCol(mat, collumn, MAX_ROW);
             break;
         case 4:
             printMatrix(mat, MAX_ROW);
@@ -73,7 +79,14 @@ int main() {
 
             delete[] sumRows;
             break;
-            // More cases
+        case 9:
+            sumCols = sumOfCols(mat, MAX_ROW);
+
+            for (int i = 0; i < MAX_ROW; ++i)
+                cout << "\nSum of cols " << i << ": " << sumCols[i];
+
+            delete[] sumCols;
+            break;
         case 0:
             break;
         default:
@@ -97,7 +110,7 @@ void showMenu() {
     cout << "\n6) Test if Identity Matrix";
     cout << "\n7) Sum of Diagonal";
     cout << "\n8) Sum of all rows";
-    cout << "\n9) advanced option 2";
+    cout << "\n9) Sum of all cols";
     cout << "\n0) Exit";
     cout << "\nEnter choice: ";
 }

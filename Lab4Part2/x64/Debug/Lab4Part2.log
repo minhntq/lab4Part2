@@ -1,4 +1,5 @@
 ﻿  Matrix.cpp
+C:\Users\DELL\source\repos\Lab4Part2\Lab4Part2\Matrix.cpp(173,12): warning C4101: 'j': unreferenced local variable
   Source.cpp
   Generating Code...
   Lab4Part2.vcxproj -> C:\Users\DELL\source\repos\Lab4Part2\x64\Debug\Lab4Part2.exe

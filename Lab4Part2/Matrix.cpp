@@ -103,17 +103,43 @@ double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
  */
 double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
     assert(maxRow > 0);
-    int i;
+    int i, j;
 
     double* retValues = new double[maxRow] {0};
 
     for (i = 0; i < maxRow; ++i) {
-        for (int j = 0; j < MAX_COL; ++j)
+        for (j = 0; j < MAX_COL; ++j)
             retValues[i] += mat[i][j];
     }
     assert(i == maxRow);
+    assert(j == MAX_COL);
     return retValues;
 }
+/**
+ * The <code>sumOfCols</code> function sums up the values of all the cols and
+ * return this as a single dimention array.
+ * NOTE: return value is dynamically allocated caller must delete it.
+ * <BR>
+ * @param mat The matrix.
+ * @param maxRow How many rows the matrix have.
+ * @return Returns a single dimention array of size <code>maxRow</code>,
+ * which MUST be deleted by the caller.
+ */
+double* sumOfCols(const double mat[][MAX_COL], const int maxRow) {
+    assert(maxRow > 0);
+    int i, j;
+
+    double* retValues = new double[maxRow] {0};
+
+    for (i = 0; i < maxRow; ++i) {
+        for (j = 0; j < MAX_COL; ++j)
+            retValues[j] += mat[i][j];
+    }
+    assert(i == maxRow);
+    assert(j == MAX_COL);
+    return retValues;
+}
+
 
 /**
  * The <code>sumOfRow</code> function sums up the values of one specific row and
@@ -130,6 +156,27 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
 
     for (i = 0; i < MAX_COL; ++i)
         sum += mat[row][i];
+
+    assert(i == maxRow);
+    return sum;
+}
+/**
+ * The <code>sumOfCollumn</code> function sums up the values of one specific collumn and
+ * returns this sum.
+ * <BR>
+ * @param mat The matrix.
+ * @param collumn The specific collumn that we want to sum up
+ * @param maxRow How many rows the matrix have.
+ */
+double sumOfCol(const double mat[][MAX_COL], const int collumn, const int maxRow) {
+    assert(collumn >= 0 && collumn < maxRow);
+    int i, j;
+    double sum = 0;
+
+    for (i = 0; i < MAX_COL; ++i) {
+       
+        sum += mat[i][collumn];
+    }
 
     assert(i == maxRow);
     return sum;
@@ -171,3 +218,4 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow) {
     cout << endl;
     assert(i == maxRow);
 }
+
