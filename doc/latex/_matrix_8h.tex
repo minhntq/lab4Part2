@@ -1,0 +1,176 @@
+\doxysection{C\+:/\+Users/\+DELL/source/repos/lab4\+Part2/\+Lab4\+Part2/\+Matrix.h File Reference}
+\hypertarget{_matrix_8h}{}\label{_matrix_8h}\index{C:/Users/DELL/source/repos/lab4Part2/Lab4Part2/Matrix.h@{C:/Users/DELL/source/repos/lab4Part2/Lab4Part2/Matrix.h}}
+
+
+A small marix library, header file.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_matrix_8h_af47248da333f70455f88dd64845eebe2}{sum\+Of\+Row}} (const double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int row, const int max\+Row)
+\item 
+\Hypertarget{_matrix_8h_a9472b5bfa2f1c96800f2f841dae70b77}\label{_matrix_8h_a9472b5bfa2f1c96800f2f841dae70b77} 
+double {\bfseries sum\+Of\+Col} (const double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int column, const int max\+Row)
+\item 
+void \mbox{\hyperlink{_matrix_8h_ab41cd9c5d61e9638e93923b7f16f4bd1}{fill\+With\+Random\+Num}} (double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int max\+Row)
+\item 
+void \mbox{\hyperlink{_matrix_8h_abaf356e9d3a9f5c7d78374c52bb8a722}{print\+Matrix}} (const double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int max\+Row)
+\item 
+bool \mbox{\hyperlink{_matrix_8h_a3bdc62faf33d02b8cbec0bb1a030464f}{is\+Identity\+Matrix}} (const double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int max\+Row)
+\item 
+bool \mbox{\hyperlink{_matrix_8h_ac68e65fa780e47f19f609696b7915445}{make\+Identity\+Matrix}} (double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int max\+Row)
+\item 
+double \mbox{\hyperlink{_matrix_8h_a10b5f61ddf04ff4c159579b8e0b4d319}{sum\+Of\+Diagonal}} (const double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int max\+Row)
+\item 
+double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_matrix_8h_a0156bba0ae6aec808ed38fd85e4d6cc6}{sum\+Of\+Rows}} (const double mat\mbox{[}$\,$\mbox{]}\mbox{[}MAX\+\_\+\+COL\mbox{]}, const int max\+Row)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_matrix_8h_aa540118612c6e0181d5c0da87374ab0b}\label{_matrix_8h_aa540118612c6e0181d5c0da87374ab0b} 
+const int {\bfseries MAX\+\_\+\+COL} = 5
+\item 
+\Hypertarget{_matrix_8h_a8c18438e8b6472ce1626aa2746c6a3cc}\label{_matrix_8h_a8c18438e8b6472ce1626aa2746c6a3cc} 
+const int {\bfseries RANDOM\+\_\+\+MIN} = 0
+\item 
+\Hypertarget{_matrix_8h_aef87ca5759d09d1cb1d3e44b9eb058da}\label{_matrix_8h_aef87ca5759d09d1cb1d3e44b9eb058da} 
+const int {\bfseries RANDOM\+\_\+\+MAX} = 50
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A small marix library, header file. 
+
+The .. \begin{DoxyAuthor}{Author}
+Harald Gjermundrod 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/2020 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+First initialize the system. 
+\end{DoxyPrecond}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]No bugs so far \end{DoxyRefDesc}
+\begin{DoxyCopyright}{Copyright}
+University of Nicosia. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_matrix_8h_ab41cd9c5d61e9638e93923b7f16f4bd1}\label{_matrix_8h_ab41cd9c5d61e9638e93923b7f16f4bd1} 
+\index{Matrix.h@{Matrix.h}!fillWithRandomNum@{fillWithRandomNum}}
+\index{fillWithRandomNum@{fillWithRandomNum}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{fillWithRandomNum()}{fillWithRandomNum()}}
+{\footnotesize\ttfamily void fill\+With\+Random\+Num (\begin{DoxyParamCaption}\item[{double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily fill\+With\+Random\+Num} function initializes the matrix with random numbers, in the range of {\ttfamily RANDOM\+\_\+\+MIN} -\/ {\ttfamily RANDOM\+\_\+\+MAX}. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix to be initialized with random numbers \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_matrix_8h_a3bdc62faf33d02b8cbec0bb1a030464f}\label{_matrix_8h_a3bdc62faf33d02b8cbec0bb1a030464f} 
+\index{Matrix.h@{Matrix.h}!isIdentityMatrix@{isIdentityMatrix}}
+\index{isIdentityMatrix@{isIdentityMatrix}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{isIdentityMatrix()}{isIdentityMatrix()}}
+{\footnotesize\ttfamily bool is\+Identity\+Matrix (\begin{DoxyParamCaption}\item[{const double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily is\+Identity\+Matrix} function checks if the matrix is an identity matrix. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix. \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\ttfamily true} if this is an identity matrix. 
+\end{DoxyReturn}
+\Hypertarget{_matrix_8h_ac68e65fa780e47f19f609696b7915445}\label{_matrix_8h_ac68e65fa780e47f19f609696b7915445} 
+\index{Matrix.h@{Matrix.h}!makeIdentityMatrix@{makeIdentityMatrix}}
+\index{makeIdentityMatrix@{makeIdentityMatrix}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{makeIdentityMatrix()}{makeIdentityMatrix()}}
+{\footnotesize\ttfamily bool make\+Identity\+Matrix (\begin{DoxyParamCaption}\item[{double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily make\+Identity\+Matrix} function makes the argument matrix into an identity matrix. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix. \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\ttfamily false} if this is not a square matrix. 
+\end{DoxyReturn}
+\Hypertarget{_matrix_8h_abaf356e9d3a9f5c7d78374c52bb8a722}\label{_matrix_8h_abaf356e9d3a9f5c7d78374c52bb8a722} 
+\index{Matrix.h@{Matrix.h}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily void print\+Matrix (\begin{DoxyParamCaption}\item[{const double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily print\+Matrix} function shows the content of the matrix. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix to be shown \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_matrix_8h_a10b5f61ddf04ff4c159579b8e0b4d319}\label{_matrix_8h_a10b5f61ddf04ff4c159579b8e0b4d319} 
+\index{Matrix.h@{Matrix.h}!sumOfDiagonal@{sumOfDiagonal}}
+\index{sumOfDiagonal@{sumOfDiagonal}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{sumOfDiagonal()}{sumOfDiagonal()}}
+{\footnotesize\ttfamily double sum\+Of\+Diagonal (\begin{DoxyParamCaption}\item[{const double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily sum\+Of\+Diagonal} function returns the sum of the diogonal of the argument matrix. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix. \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns sum of diagonal, {\ttfamily -\/1} if this is not a square matrix. 
+\end{DoxyReturn}
+\Hypertarget{_matrix_8h_af47248da333f70455f88dd64845eebe2}\label{_matrix_8h_af47248da333f70455f88dd64845eebe2} 
+\index{Matrix.h@{Matrix.h}!sumOfRow@{sumOfRow}}
+\index{sumOfRow@{sumOfRow}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{sumOfRow()}{sumOfRow()}}
+{\footnotesize\ttfamily double sum\+Of\+Row (\begin{DoxyParamCaption}\item[{const double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{row,  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily sum\+Of\+Row} function sums up the values of one specific row and returns this sum. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix. \\
+\hline
+{\em row} & The specific row that we want to sum up \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_matrix_8h_a0156bba0ae6aec808ed38fd85e4d6cc6}\label{_matrix_8h_a0156bba0ae6aec808ed38fd85e4d6cc6} 
+\index{Matrix.h@{Matrix.h}!sumOfRows@{sumOfRows}}
+\index{sumOfRows@{sumOfRows}!Matrix.h@{Matrix.h}}
+\doxysubsubsection{\texorpdfstring{sumOfRows()}{sumOfRows()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*} sum\+Of\+Rows (\begin{DoxyParamCaption}\item[{const double}]{mat\mbox{[}$\,$\mbox{]}\mbox{[}\+MAX\+\_\+\+COL\mbox{]},  }\item[{const int}]{max\+Row }\end{DoxyParamCaption})}
+
+The {\ttfamily sum\+Of\+Rows} function sums up the values of all the rows and return this as a single dimention array. NOTE\+: return value is dynamically allocated caller must delete it. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix. \\
+\hline
+{\em max\+Row} & How many rows the matrix have. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a single dimention array of size {\ttfamily max\+Row}, which MUST be deleted by the caller. 
+\end{DoxyReturn}
