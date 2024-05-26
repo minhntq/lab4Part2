@@ -1,9 +1,9 @@
 /** \file Matrix.cpp
  *  \brief     A small marix library, implementation file
  *  \details   The  ..
- *  \author    Harald Gjermundrod
+ *  \author    Minh Nguyen Truong Quang
  *  \version   0.1
- *  \date      2020-2020
+ *  \date      25/5/2024
  *  \pre       First initialize the system.
  *  \bug       Logical bugs in the following functions:
  *             1) isIdentityMatrix
@@ -85,7 +85,7 @@ double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
         return 0; // Identity matrix must be a square matrix
 
     for (i = 0; i < maxRow; ++i) {
-        sum *= mat[i][i];
+        sum += mat[i][i];
     }
     assert(i == maxRow);
     return sum;
@@ -128,7 +128,7 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
     int i;
     double sum = 0;
 
-    for (i = 0; i < MAX_COL; --i)
+    for (i = 0; i < MAX_COL; ++i)
         sum += mat[row][i];
 
     assert(i == maxRow);
@@ -146,7 +146,7 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow) {
     assert(maxRow > 0);
     int i;
     for (i = 0; i < maxRow; ++i) {
-        for (int j = 1; j < MAX_COL; ++j)
+        for (int j = 0; j < MAX_COL; ++j)
             mat[i][j] = rand() % RANDOM_MAX; // @TODO ASSUMING RANDOM_MIN == 0
     }
     assert(i == maxRow);
