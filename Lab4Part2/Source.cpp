@@ -1,9 +1,9 @@
 /** \file Source.cpp
  *  \brief     A little program
- *  \details   The program ..
- *  \author    Harald Gjermundrod
+ *  \details   The program source to show the menu of options
+ *  \author    Minh Nguyen Truong Quang Minh
  *  \version   0.1
- *  \date      2020-2020
+ *  \date      26/05/2024
  *  \pre       First initialize the system.
  *  \bug       No bugs so far
  *  \copyright University of Nicosia.

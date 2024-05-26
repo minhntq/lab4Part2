@@ -26,10 +26,12 @@ using namespace std;
  * @return Returns <code>true</code> if this is an identity matrix.
  */
 bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow) {
+    assert(maxRow > 0);
+    int i;
     if (MAX_COL != maxRow)
         return false; // Identity matrix must be a square matrix
 
-    for (int i = 0; i < maxRow; ++i) {
+    for (i = 0; i < maxRow; ++i) {
         for (int j = 0; j < maxRow; ++j) {
             if (i == j && mat[i][j] != 1)
                 return false;
@@ -37,6 +39,7 @@ bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow) {
                 return false;
         }
     }
+    assert(i == maxRow);
     return true;
 }
 
@@ -49,10 +52,12 @@ bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow) {
  * @return Returns <code>false</code> if this is not a square matrix.
  */
 bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
+    assert(maxRow > 0);
+    int i;
     if (MAX_COL != maxRow)
         return false; // Identity matrix must be a square matrix
 
-    for (int i = 0; i < maxRow; ++i) {
+    for (i = 0; i < maxRow; ++i) {
         for (int j = 1; i < maxRow; ++j) {
             if (i == j)
                 mat[i][j] = 1;
@@ -60,6 +65,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
                 mat[i][j] = 0;
         }
     }
+    assert(i == maxRow);
     return true;
 }
 
@@ -71,15 +77,17 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
  * @return Returns sum of diagonal, <code>-1</code> if this is not a square matrix.
  */
 double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
+    assert(maxRow > 0);
+    int i;
     double sum = 1;
 
     if (MAX_COL != maxRow)
         return 0; // Identity matrix must be a square matrix
 
-    for (int i = 0; i < maxRow; ++i) {
+    for (i = 0; i < maxRow; ++i) {
         sum *= mat[i][i];
     }
-
+    assert(i == maxRow);
     return sum;
 }
 
@@ -94,15 +102,16 @@ double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
  * which MUST be deleted by the caller.
  */
 double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
-    // @TODO you add assert
+    assert(maxRow > 0);
+    int i;
 
     double* retValues = new double[maxRow] {0};
 
-    for (int i = 0; i < maxRow; ++i) {
+    for (i = 0; i < maxRow; ++i) {
         for (int j = 0; j < MAX_COL; ++j)
             retValues[i] += mat[i][j];
     }
-
+    assert(i == maxRow);
     return retValues;
 }
 
@@ -116,11 +125,13 @@ double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
  */
 double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
     assert(row >= 0 && row < maxRow);
+    int i;
     double sum = 0;
 
-    for (int i = 0; i < MAX_COL; ++i)
+    for (i = 0; i < MAX_COL; --i)
         sum += mat[row][i];
 
+    assert(i == maxRow);
     return sum;
 }
 
@@ -132,12 +143,13 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
  * @param maxRow How many rows the matrix have.
  */
 void fillWithRandomNum(double mat[][MAX_COL], const int maxRow) {
-    // @TODO add asserts
-
-    for (int i = 0; i < maxRow; ++i) {
-        for (int j = 0; j < MAX_COL; ++j)
+    assert(maxRow > 0);
+    int i;
+    for (i = 0; i < maxRow; ++i) {
+        for (int j = 1; j < MAX_COL; ++j)
             mat[i][j] = rand() % RANDOM_MAX; // @TODO ASSUMING RANDOM_MIN == 0
     }
+    assert(i == maxRow);
 }
 
 /**
@@ -147,14 +159,15 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow) {
  * @param maxRow How many rows the matrix have.
  */
 void printMatrix(const double mat[][MAX_COL], const int maxRow) {
-    // @TODO add asserts
-
+    assert(maxRow > 0);
+    int i;
     cout << "\n\nContent of matrix";
 
-    for (int i = 0; i < maxRow; ++i) { //@TODO add the column identifier at the top
+    for (i = 0; i < maxRow; ++i) { //@TODO add the column identifier at the top
         cout << "\nRow " << i << ": ";
         for (int j = 0; j < MAX_COL; ++j)
             cout << mat[i][j] << "\t"; // @TODO make it nice by using setw()
     }
     cout << endl;
+    assert(i == maxRow);
 }
