@@ -79,7 +79,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
 double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
     assert(maxRow > 0);
     int i;
-    double sum = 1;
+    double sum = 0;
 
     if (MAX_COL != maxRow)
         return 0; // Identity matrix must be a square matrix
