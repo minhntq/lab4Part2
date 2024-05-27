@@ -1,9 +1,9 @@
 /** \file Matrix.h
  *  \brief     A small marix library, header file
  *  \details   The  ..
- *  \author    Harald Gjermundrod
+ *  \author    Minh Nguyen Truong Quang
  *  \version   0.1
- *  \date      2020-2020
+ *  \date      24/05/2024
  *  \pre       First initialize the system.
  *  \bug       No bugs so far
  *  \copyright University of Nicosia.
